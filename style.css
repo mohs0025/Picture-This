@@ -1,3 +1,6 @@
+....................
+
+<!-- css first code -->
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
 
 html,
@@ -36,5 +39,27 @@ img {
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* aditional adjustment */
+
+  /* 1. Landscape image */
+@media (max-width: 959px) {
+
+  .header img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Take up the full width of the container */
+  }
+}
+
+@media (min-width: 960px) {
+  /* 2. Square image */
+  .header picture:nth-child(2) img {
+    max-width: 50%; /* Ensure the image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Let the width adjust according to the aspect ratio */
   }
 }
